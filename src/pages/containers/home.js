@@ -9,8 +9,7 @@ import VideoPlayer from '../../player/containers/video-player';
 
 class Home extends Component{
 	state = {
-		modalVisible: false,
-
+			modalVisible:false,
 	}
 	handleOpenModal=()=>{
 		this.setState({
@@ -37,7 +36,8 @@ componentDidCatch(error,info){
 			<HandleError>
 				<HomeLayout>
 				<Related/>
-				<VideoPlayer/>
+				<VideoPlayer
+				autoplay				/>
 				<Categories 
 					categories={this.props.data.categories}
 					handleOpenModal={this.handleOpenModal}
