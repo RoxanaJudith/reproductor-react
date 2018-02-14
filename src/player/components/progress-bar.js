@@ -10,7 +10,6 @@ function ProgressBar (props) {
 				max={props.duration}
 				value={props.value}
 				onChange={props.handleProgressChange}
-
 			/>
 			</div>
 		)
