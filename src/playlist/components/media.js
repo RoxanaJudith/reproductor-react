@@ -28,12 +28,13 @@ class Media extends PureComponent{
 	// }
 
 	//ECMAS 7	Enlazar eventos DOM (array function)
-	//handleClick = (event)=>{
-		//console.log(this.props.title);
-		//this.setState({   //cambios de estado
-		//	autor:'Ricardo Celis'
-		//})
-	//}
+	handleClick = (event)=>{
+		// console.log(this.props.title);
+		// this.setState({   //cambios de estado
+		// 	autor:'Ricardo Celis'
+		// })
+		this.props.openModal(this.props)
+	}
 	render(){
 		const styles ={
 			container:{
@@ -61,7 +62,7 @@ class Media extends PureComponent{
 			 </div>			 
 			 </div>
 			 */
-			 <div className="Media" onClick={this.props.handleClick}>
+			 <div className="Media" onClick={this.handleClick}>
 			 <div className="Media-cover">
 			 	<img 
 			 	  src={this.props.cover}
